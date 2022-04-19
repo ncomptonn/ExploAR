@@ -10,11 +10,16 @@ import RealityKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var arView: ARView!
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var arView: ARView!
+    var timer: Timer!
+    var counter = 0.0
+    var isPlaying = false
+    var targets: [Entity] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         // create anchor which teathers content to real world
         let targetAnchor = AnchorEntity(plane: .vertical, minimumBounds: [0.2, 0.2])
         let buttonAnchor = AnchorEntity(.camera)
@@ -23,7 +28,6 @@ class ViewController: UIViewController {
         arView.scene.addAnchor(targetAnchor)
         
         // create target items
-        var targets: [Entity] = []
         for _ in 1...20 {
             let target = MeshResource.generateBox(width: 0.2, height: 0.2, depth: 0.2)
             let targetMaterial = SimpleMaterial(color: .green, isMetallic: true)
@@ -35,8 +39,7 @@ class ViewController: UIViewController {
         // position each target based on anchor
         for (index, target) in targets.enumerated(){
             let x = Float(index % 5)
-            let y = Float(index / 5)
-            target.position = [x*0.5, y*0.5 - 2, Float.random(in: -2...2)*0.5]
+            target.position = [x*0.5, Float.random(in: -3 ... -1), Float.random(in: -2...2)*0.5]
             targetAnchor.addChild(target)
         }
         
@@ -56,21 +59,41 @@ class ViewController: UIViewController {
         arView.scene.addAnchor(buttonAnchor)
         crosshair1.transform.translation = [0, 0, -0.5]
         crosshair2.transform.translation = [0, 0, -0.5]
+        
     }
     
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//            let touch = arView.center
-//            let results: [CollisionCastHit] = arView.hitTest(touch)
-//
-//            if let result: CollisionCastHit = results.first {
-//                if result.entity.name == "Cube" && sphere?.isAnchored == true {
-//                    print("BOOM!")
-//                }
-//            }
-//        }
+
+    @IBAction func fireButtonPressed(_ sender: Any) {
+        if (isPlaying == false){
+            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(checkToStop), userInfo: nil, repeats: true)
+            isPlaying = true
+        }
+        let point = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2)
+        if let target = arView.entity(at: point) {
+            var flipTransform = target.transform
+            flipTransform.rotation = simd_quatf(angle: 0, axis: [1, 0, 0])
+            target.move(to: flipTransform, relativeTo: target.parent, duration: 0.5, timingFunction: .easeInOut)
+            target.isEnabled = false;
+        }
+    }
     
-    @objc func fire(sender: UIButton!) {
-        
+    @objc func checkToStop() {
+        counter += 0.1
+        var count = 0
+        for target in targets{
+            if (target.isEnabled){
+                return
+            } else {
+                count += 1
+            }
+        }
+        if (count != 20){
+            return
+        }
+        timer.invalidate()
+        isPlaying = false
+        print(String(format: "%.1f", counter))
+        self.present(endOfGameViewController(), animated: true)
     }
     
     

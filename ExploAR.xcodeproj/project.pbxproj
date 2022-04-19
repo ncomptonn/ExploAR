@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1A3E9E4280E5EA500113B3A /* endOfGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3E9E3280E5EA500113B3A /* endOfGameViewController.swift */; };
+		E1A3E9E6280E604900113B3A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3E9E5280E604900113B3A /* MenuViewController.swift */; };
 		E1CBDF67280DB0FC00E7726C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CBDF66280DB0FC00E7726C /* AppDelegate.swift */; };
 		E1CBDF69280DB0FC00E7726C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CBDF68280DB0FC00E7726C /* ViewController.swift */; };
 		E1CBDF6B280DB0FC00E7726C /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = E1CBDF6A280DB0FC00E7726C /* Experience.rcproject */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E1A3E9E3280E5EA500113B3A /* endOfGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = endOfGameViewController.swift; sourceTree = "<group>"; };
+		E1A3E9E5280E604900113B3A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E1CBDF63280DB0FC00E7726C /* ExploAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExploAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CBDF66280DB0FC00E7726C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1CBDF68280DB0FC00E7726C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1A3E9A5280DE41F00113B3A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1CBDF68280DB0FC00E7726C /* ViewController.swift */,
+				E1A3E9E3280E5EA500113B3A /* endOfGameViewController.swift */,
+				E1A3E9E5280E604900113B3A /* MenuViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		E1CBDF5A280DB0FC00E7726C = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +112,8 @@
 		E1CBDF65280DB0FC00E7726C /* ExploAR */ = {
 			isa = PBXGroup;
 			children = (
+				E1A3E9A5280DE41F00113B3A /* Controllers */,
 				E1CBDF66280DB0FC00E7726C /* AppDelegate.swift */,
-				E1CBDF68280DB0FC00E7726C /* ViewController.swift */,
 				E1CBDF6A280DB0FC00E7726C /* Experience.rcproject */,
 				E1CBDF6C280DB0FC00E7726C /* Main.storyboard */,
 				E1CBDF6F280DB0FD00E7726C /* Assets.xcassets */,
@@ -257,6 +271,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1CBDF69280DB0FC00E7726C /* ViewController.swift in Sources */,
+				E1A3E9E6280E604900113B3A /* MenuViewController.swift in Sources */,
+				E1A3E9E4280E5EA500113B3A /* endOfGameViewController.swift in Sources */,
 				E1CBDF67280DB0FC00E7726C /* AppDelegate.swift in Sources */,
 				E1CBDF6B280DB0FC00E7726C /* Experience.rcproject in Sources */,
 			);
