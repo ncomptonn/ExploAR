@@ -7,11 +7,15 @@
 
 import UIKit
 
+let MAIN_COLOR_BG = UIColor(red: 0.11, green: 0.15, blue: 0.19, alpha: 1.00)
+let BLACK = UIColor(red: 0.00, green: 0.00, blue: 0.00, alpha: 1.00)
+let BLUE = UIColor(red: 0.20, green: 0.60, blue: 0.86, alpha: 1.00)
+let YELLOW = UIColor(red: 0.97, green: 0.86, blue: 0.44, alpha: 1.00)
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1A3E9E4280E5EA500113B3A /* endOfGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3E9E3280E5EA500113B3A /* endOfGameViewController.swift */; };
 		E1A3E9E6280E604900113B3A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3E9E5280E604900113B3A /* MenuViewController.swift */; };
+		E1A3E9E8280F2E5900113B3A /* IOSgif.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3E9E7280F2E5900113B3A /* IOSgif.swift */; };
+		E1A3E9EE280F830700113B3A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3E9ED280F830700113B3A /* SettingsViewController.swift */; };
+		E1A3E9F0280F831900113B3A /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3E9EF280F831900113B3A /* LeaderboardViewController.swift */; };
+		E1A3E9F2280F864C00113B3A /* leaderboardEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3E9F1280F864C00113B3A /* leaderboardEntry.swift */; };
 		E1CBDF67280DB0FC00E7726C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CBDF66280DB0FC00E7726C /* AppDelegate.swift */; };
 		E1CBDF69280DB0FC00E7726C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CBDF68280DB0FC00E7726C /* ViewController.swift */; };
 		E1CBDF6B280DB0FC00E7726C /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = E1CBDF6A280DB0FC00E7726C /* Experience.rcproject */; };
@@ -38,8 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E1A3E9E3280E5EA500113B3A /* endOfGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = endOfGameViewController.swift; sourceTree = "<group>"; };
 		E1A3E9E5280E604900113B3A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E1A3E9E7280F2E5900113B3A /* IOSgif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSgif.swift; sourceTree = "<group>"; };
+		E1A3E9ED280F830700113B3A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E1A3E9EF280F831900113B3A /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		E1A3E9F1280F864C00113B3A /* leaderboardEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leaderboardEntry.swift; sourceTree = "<group>"; };
 		E1CBDF63280DB0FC00E7726C /* ExploAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExploAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CBDF66280DB0FC00E7726C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1CBDF68280DB0FC00E7726C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,8 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				E1CBDF68280DB0FC00E7726C /* ViewController.swift */,
-				E1A3E9E3280E5EA500113B3A /* endOfGameViewController.swift */,
 				E1A3E9E5280E604900113B3A /* MenuViewController.swift */,
+				E1A3E9ED280F830700113B3A /* SettingsViewController.swift */,
+				E1A3E9EF280F831900113B3A /* LeaderboardViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -112,12 +119,14 @@
 		E1CBDF65280DB0FC00E7726C /* ExploAR */ = {
 			isa = PBXGroup;
 			children = (
+				E1A3E9F1280F864C00113B3A /* leaderboardEntry.swift */,
 				E1A3E9A5280DE41F00113B3A /* Controllers */,
 				E1CBDF66280DB0FC00E7726C /* AppDelegate.swift */,
 				E1CBDF6A280DB0FC00E7726C /* Experience.rcproject */,
 				E1CBDF6C280DB0FC00E7726C /* Main.storyboard */,
 				E1CBDF6F280DB0FD00E7726C /* Assets.xcassets */,
 				E1CBDF71280DB0FD00E7726C /* LaunchScreen.storyboard */,
+				E1A3E9E7280F2E5900113B3A /* IOSgif.swift */,
 			);
 			path = ExploAR;
 			sourceTree = "<group>";
@@ -270,11 +279,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1A3E9F2280F864C00113B3A /* leaderboardEntry.swift in Sources */,
+				E1A3E9F0280F831900113B3A /* LeaderboardViewController.swift in Sources */,
+				E1A3E9E8280F2E5900113B3A /* IOSgif.swift in Sources */,
 				E1CBDF69280DB0FC00E7726C /* ViewController.swift in Sources */,
 				E1A3E9E6280E604900113B3A /* MenuViewController.swift in Sources */,
-				E1A3E9E4280E5EA500113B3A /* endOfGameViewController.swift in Sources */,
 				E1CBDF67280DB0FC00E7726C /* AppDelegate.swift in Sources */,
 				E1CBDF6B280DB0FC00E7726C /* Experience.rcproject in Sources */,
+				E1A3E9EE280F830700113B3A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
